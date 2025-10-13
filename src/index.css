@@ -1,0 +1,44 @@
+:root {
+  --blue: #16479D;
+  --white: #EEE;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+h1 {
+  color: var(--blue);
+}
+button, .btn {
+  font-weight: bold !important;
+}
+a {
+  font-weight: bold !important;
+  text-decoration: none !important;
+  color: var(--blue) !important;
+}
+header a:hover {
+  color: #FFC107 !important;
+}
+nav {
+  background-color: var(--white);
+}
+footer {
+  background-color: var(--white);
+  color: #444;
+  padding: 20px 0px 20px 0px;
+}
+main {
+  padding-top: 85px;
+}
+.btn-color {
+  background-color: var(--blue) !important;
+}
+.text-justify {
+  text-align: justify;
+}
+.borda {
+  border: 1px solid red;
+}
