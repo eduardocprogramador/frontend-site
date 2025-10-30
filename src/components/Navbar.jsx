@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom"
 import Logo from '../../public/img/logo.png'
+import Perfil from '../../public/img/perfil.png'
 import { AuthContext } from "../context/Auth"
 import { useContext } from "react"
 
 const Navbar = () => {
-  const {logout} = useContext(AuthContext)
+  const {user} = useContext(AuthContext)
+  console.log(user)
   return (
   <header>
     <nav className="navbar navbar-expand-md fixed-top">
@@ -36,10 +38,13 @@ const Navbar = () => {
                         <i className="fa-solid fa-location-dot"></i> Localização
                     </Link>
                 </li>
-                <li className="nav-item mx-auto">
-                    <button onClick={logout} className="nav-link text-danger">
-                        <i className="fa-solid fa-arrow-right"></i> Sair
-                    </button>
+                <li className="nav-item mx-auto"> 
+                    <Link to="/perfil" className="nav-link">
+                        {/* <span>{user.name}</span>  */}
+                        {/*<span>
+                            <img className='img-fluid' src={Perfil} />
+                        </span>*/}
+                    </Link>
                 </li>
             </ul>
         </div>

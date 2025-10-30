@@ -5,18 +5,18 @@ import { AuthContext } from "../context/Auth"
 
 const Login = () => {
   const {loading, login} = useContext(AuthContext)
-  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   async function handleSubmit(e){
     e.preventDefault()
-    const user = {name, password}
+    const user = {email, password}
     await login(user)
   }
   return (
   <CardForm headline='Login'>
     <form onSubmit={handleSubmit}>
-      <label className="mb-1">Username:</label>
-      <input required type="text" value={name} onChange={e => setName(e.target.value)} className="form-control mb-3"/>
+      <label className="mb-1">Email:</label>
+      <input required type="text" value={email} onChange={e => setEmail(e.target.value)} className="form-control mb-3"/>
       <label className="mb-1">Senha:</label>
       <input required type="password" value={password} onChange={e => setPassword(e.target.value)} className="form-control mb-3"/>
       <div className="col-md-6 offset-md-3 col-8 offset-2">

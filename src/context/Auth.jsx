@@ -50,10 +50,9 @@ const AuthProvider = ({children}) => {
     }
     useEffect(() => {
         async function checkUser() {
-            const raw = localStorage.getItem("token")
-            const token = raw ? JSON.parse(raw) : null
+            const token = localStorage.getItem('token')
             if (token) {
-                api.defaults.headers.Authorization = `Bearer ${token}`
+                api.defaults.headers.Authorization = `Bearer ${JSON.parse(token)}`
                 try {
                     const {data} = await api.get("/user/check")
                     setAuth(true)

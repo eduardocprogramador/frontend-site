@@ -6,11 +6,12 @@ import { AuthContext } from "../context/Auth"
 const Register = () => {
   const {loading, register} = useContext(AuthContext)
   const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   async function handleSubmit(e){
     e.preventDefault()
-    const user = {name, password, confirmPassword}
+    const user = {name, email, password, confirmPassword}
     await register(user)
   }
   return (
@@ -18,6 +19,8 @@ const Register = () => {
     <form onSubmit={handleSubmit}>
       <label className="mb-1">Username:</label>
       <input required type="text" value={name} onChange={e => setName(e.target.value)} className="form-control mb-3"/>
+      <label className="mb-1">Email:</label>
+      <input required type="email" value={email} onChange={e => setEmail(e.target.value)} className="form-control mb-3"/>
       <label className="mb-1">Senha:</label>
       <input required type="password" value={password} onChange={e => setPassword(e.target.value)} className="form-control mb-3"/>
       <label className="mb-1">Confirmar Senha:</label>

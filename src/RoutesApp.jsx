@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import Contato from "./pages/Contato"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import Perfil from "./pages/Perfil"
 import NotFound from "./pages/NotFound"
 import Layout from "./utils/Layout"
 import SobreNos from "./pages/SobreNos"
@@ -42,6 +43,14 @@ const RoutesApp = () => {
         <Private>
           <Layout>
             <Localizacao />
+          </Layout>
+        </Private>
+      } 
+      />
+      <Route path="/perfil" element={
+        <Private>
+          <Layout>
+            <Perfil />
           </Layout>
         </Private>
       } 
