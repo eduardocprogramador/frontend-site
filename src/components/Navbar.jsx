@@ -6,6 +6,7 @@ import { useContext } from "react"
 
 const Navbar = () => {
     const { user } = useContext(AuthContext)
+    const userImgURL = user?.img ? `${import.meta.env.VITE_API}/img/user/${user.img}` : null
     return (
         <header>
             <nav className="navbar navbar-expand-md fixed-top">
@@ -39,7 +40,7 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item mx-auto d-flex align-items-center">
                             <Link to="/perfil" className="nav-link p-0">
-                                <img src={Foto} width="45" height="45" className="rounded-circle" alt="Perfil" />
+                                <img src={userImgURL ? userImgURL : Foto} width="45" height="45" className="rounded-circle" alt="Perfil" />
                             </Link>
                         </li>
                     </ul>

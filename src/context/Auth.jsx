@@ -18,6 +18,7 @@ const AuthProvider = ({children}) => {
     }
     async function authUser(data) {
         setToken(data.token)
+        setUser(data.user)
         navigate('/', {replace: true})
     }
     async function register(user) {
@@ -46,6 +47,7 @@ const AuthProvider = ({children}) => {
         localStorage.removeItem('token')
         api.defaults.headers.Authorization = undefined
         setAuth(false)
+        setUser(null)
         navigate("/login", {replace: true})
     }
     useEffect(() => {
@@ -68,7 +70,7 @@ const AuthProvider = ({children}) => {
         checkUser()
     }, [])
     return (
-    <AuthContext value={{user, auth, authLoading, loading, setLoading, register, login, logout}}>
+    <AuthContext value={{user, setUser, auth, authLoading, loading, setLoading, register, login, logout}}>
         {children}
     </AuthContext>
     )
