@@ -56,7 +56,7 @@ const AuthProvider = ({children}) => {
                 try {
                     const {data} = await api.get("/user/check")
                     setAuth(true)
-                    setUser(data.user)
+                    setUser(data.currentUser)
                 } catch {
                     localStorage.removeItem("token")
                     api.defaults.headers.Authorization = undefined
@@ -68,7 +68,7 @@ const AuthProvider = ({children}) => {
         checkUser()
     }, [])
     return (
-    <AuthContext value={{user, auth, authLoading, loading, register, login, logout}}>
+    <AuthContext value={{user, auth, authLoading, loading, setLoading, register, login, logout}}>
         {children}
     </AuthContext>
     )
