@@ -1,13 +1,30 @@
-# React + Vite
+## 🚀 Frontend Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Framework frontend criado para acelerar o desenvolvimento de aplicações **React**, trazendo **estrutura organizada, padrões reutilizáveis e base pronta para projetos reais**.
 
-Currently, two official plugins are available:
+Este projeto foi desenvolvido para evitar retrabalho e facilitar a escalabilidade de aplicações frontend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ O que é este projeto?
 
-## Expanding the ESLint configuration
+Um **frontend reutilizável** que serve como base para qualquer aplicação React moderna, focando em:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# frontend-site
+- Organização de código
+- Padronização visual
+- Reaproveitamento de componentes
+- Facilidade de manutenção e crescimento
+
+Ideal para projetos pessoais, acadêmicos ou comerciais.
+
+## 🎯 Principais objetivos
+
+- Reduzir o tempo de setup de novos projetos React
+- Facilitar a criação de telas com componentes reutilizáveis
+- Servir como base para aplicações maiores (dashboards, sistemas, sites)
+
+## 🧩 O que vem pronto?
+
+- ⚡ **React + Vite** (build rápido e moderno)
+- 🎨 Estrutura base de estilos
+- 🧱 Componentes reutilizáveis
+- 📂 Organização clara de pastas
+- 🛠 Scripts prontos para desenvolvimento e build
